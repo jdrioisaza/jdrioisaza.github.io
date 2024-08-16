@@ -1,0 +1,120 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.contenedor {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.columna-izquierda {
+    width: 30%;
+    background-color: #009688;
+    color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columna-izquierda img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.columna-izquierda #foto {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #f4f4f4;
+    border-radius: 50%;
+    margin: 25px 0 0.5px;
+}
+
+.columna-izquierda h2 {
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.columna-izquierda p,
+.columna-derecha p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.columna-izquierda .info-contacto {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.columna-izquierda .info-contacto p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.columna-izquierda .info-contacto p img {
+    margin-right: 10px;
+}
+
+.columna-derecha {
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.columna-derecha h1 {
+    margin: 0;
+    font-size: 38px;
+    color: #000;
+    font-weight: 700;
+    padding-bottom: 1px;
+}
+
+.columna-derecha h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #009688;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.columna-derecha .seccion {
+    margin-top: 20px;
+}
+
+.columna-derecha .referencias {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columna-derecha .referencias .referencia {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.columna-derecha .referencias .referencia p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    color: #000;
+    font-weight: 400;
+}
+
+.parrafo-especial {
+
+    color: #009688;
+    font-weight: 700;
+
+}
