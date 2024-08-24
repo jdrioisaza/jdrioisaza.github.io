@@ -1,0 +1,186 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #f9f9f9;
+}
+
+nav {
+    padding: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav img {
+    width: 160px;
+    margin-right: 10px;
+}
+
+nav i {
+    font-size: 30px;
+}
+
+nav p {
+    margin: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 50px;
+} 
+
+section img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+footer {
+    padding: 65px 0;
+    text-align: center;
+}
+
+footer ul {
+    margin: 32px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    font-size: 50px;
+}
+
+footer a {
+    color: #0672be;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #54aeef;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+}
+
+#materia {
+    font-size: 20px;
+}
+
+#foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+}
+
+#navegacion-superior {
+    background-color: #fff;
+    border-top: 3px solid #0183ef;
+}
+
+#navegacion-superior a {
+    color: #000;
+}
+
+#navegacion-superior a, #navegacion-inferior a {
+    text-decoration: none;
+}
+
+#navegacion-inferior {
+    background-color: #024b86;
+    font-size: 19px;
+}
+
+#navegacion-inferior a {
+    color: #fff;
+}
+
+#navegacion-inferior a:hover {
+    text-decoration: underline;
+}
+
+#busqueda {
+    margin: 15px 110px;
+}
+
+#busqueda i, #busqueda p {
+    cursor: pointer;
+}
+
+#busqueda input {
+    margin: 0 15px;
+    padding: 10px 15px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#busqueda p {
+    display: inline;
+    color: #1b5e92;
+    font-size: 20px;
+}
+
+#buscador {
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat right;
+    background-size: 20px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 15px 110px;
+}
+
+.separador {
+    display: block;
+    width: 25px;
+    margin-left: -20px;
+    margin-right: -30px;
+}
+
+section .tarjeta {
+    background-color: #fff;
+    margin: 15px;
+    padding-top: 30px;
+    border-radius: 5%;
+    text-align: center;
+    box-shadow: 0 0 10px gray;
+}
+
+.tarjeta h3 {
+    font-size: 15px;
+}
+
+.tarjeta i {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.tarjeta a {
+    color: #0672be;
+}
+
+.tarjeta a:hover, .boton:hover {
+    color: #54aeef;
+}
+
+.tarjeta img {
+    border: 5px solid #f6f6f6;
+}
