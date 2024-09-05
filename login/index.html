@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-co">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio de Sesión</title>
+    <link rel="icon" type="image/x-icon" href="./img/icono.ico">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="disposicion">
+      <div class="contenedor">
+        <img
+          src="./img/logo.png"
+          alt="Logo de la Universidad del Magdalena"
+          class="logo"
+        >
+        <h2>Iniciar Sesión</h2>
+        <form id="formulario">
+          <div class="campo">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Email">
+          </div>
+          <div class="campo">
+            <label>Contraseña (más de 6 caracteres)</label>
+            <div class="campo-contraseña">
+              <input
+                type="password"
+                id="contraseña"
+                placeholder="Contraseña"
+              >
+              <button
+                type="button"
+                id="switch"
+                class="switch"
+              >
+                Mostrar
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="boton">Iniciar sesión</button>
+        </form>
+        <div class="alternativas-inicio-sesion">
+          <p>o</p>
+          <button class="boton-google"><img src="./img/logo-google.png" alt="Logo de Google" class="logo-google">Iniciar Sesión con Google</button>
+        </div>
+        <p class="registro">
+          ¿No tienes una cuenta? <a href="#">Registrate</a>
+        </p>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
