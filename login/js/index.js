@@ -1,8 +1,3 @@
-const usuarios = [
-    { email: "p1@ejemplo.com", contraseña: "123" },
-    { email: "p2@ejemplo.com", contraseña: "321" }
-];
-
 function validarEmail(email) {
 
     const patronEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -81,7 +76,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
         window.location.href = 'https://jdrioisaza.github.io/clon/';
 
     }
-    
+
 });
 
 document.getElementById('switch').addEventListener('click', function() {
