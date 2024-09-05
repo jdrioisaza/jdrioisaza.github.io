@@ -10,6 +10,13 @@ function validarEmail(email) {
 
 }
 
+function validarContraseña(contraseña) {
+
+    const patronContraseña = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return patronContraseña.test(contraseña);
+
+}
+
 document.getElementById('formulario').addEventListener('submit', function(event) {
     
     event.preventDefault();
@@ -59,23 +66,22 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 
         return;
 
-    }
+    } else if (!validarContraseña(contraseña)) {
 
-    const usuario = usuarios.find(usuario => usuario.email === email && usuario.contraseña === contraseña);
-
-    if (usuario) {
-
-        window.location.href = 'https://jdrioisaza.github.io/clon/';
-
-    } else {
-        
         Swal.fire({
             title: "Error",
-            text: "Credenciales incorrectas",
+            text: "Formato de contraseña no valido",
             icon: "error"
         });
 
+        return;
+
+    } else {
+
+        window.location.href = 'https://jdrioisaza.github.io/clon/';
+
     }
+    
 });
 
 document.getElementById('switch').addEventListener('click', function() {
