@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-co">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juego del Número Mágico</title>
+    <link rel="icon" type="image/x-icon" href="./img/icono.png">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="disposicion">
+      <div class="contenedor">
+        <img src="./img/logo.svg" alt="Logo" class="logo">
+        <h2>¡Adivina el Número Mágico!</h2>
+        <p>Introduce un número entre 1 y 100</p>
+        <form id="formulario">
+          <div class="campo">
+            <label>Número</label>
+            <input type="number" id="numero" placeholder="Ingresa tu número" min="1" max="100">
+          </div>
+          <button type="submit" class="boton">Comprobar</button>
+        </form>
+        <p id="intentosRestantes" class="registro">Intentos restantes: 5</p>
+      </div>
+      <div id="clasificacion" class="contenedor">
+        <h3>Tabla de Clasificación</h3>
+        <ul id="tablaPuntajes"></ul>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
