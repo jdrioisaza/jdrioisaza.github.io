@@ -2,10 +2,14 @@ $(document).ready(function() {
     const contenedorLaberinto = $('#laberinto');
     const menuDificultad = $('#menu-dificultad');
     const botonVolver = $('#boton-volver');
+    const tiempoRestante = $('<div id="tiempo-restante"></div>').appendTo('body');
     let tamanioLaberinto;
     let laberinto = [];
     let posicionJugador = { x: 1, y: 1 };
     let posicionObjetivo;
+    let tiempoLimite;
+    let tiempoActual;
+    let intervaloTiempo;
 
     function inicializarLaberinto() {
         laberinto = Array.from({ length: tamanioLaberinto }, () => Array(tamanioLaberinto).fill('pared'));
@@ -23,12 +27,15 @@ $(document).ready(function() {
         switch (dificultad) {
             case 'facil':
                 tamanioLaberinto = 31;
+                tiempoLimite = 90;
                 break;
             case 'medio':
                 tamanioLaberinto = 61;
+                tiempoLimite = 180;
                 break;
             case 'dificil':
                 tamanioLaberinto = 91;
+                tiempoLimite = 240;
                 break;
         }
         posicionJugador = { x: 1, y: 1 };
@@ -37,6 +44,7 @@ $(document).ready(function() {
         menuDificultad.hide();
         contenedorLaberinto.show();
         botonVolver.show();
+        iniciarTemporizador();
     }
 
     function generarLaberintoDFS(x, y) {
@@ -96,6 +104,7 @@ $(document).ready(function() {
 
     function comprobarVictoria() {
         if (posicionJugador.x === posicionObjetivo.x && posicionJugador.y === posicionObjetivo.y) {
+            clearInterval(intervaloTiempo);
             setTimeout(() => {
                 alert('¡Ganaste! El laberinto se reiniciará.');
                 reiniciarJuego();
@@ -103,10 +112,42 @@ $(document).ready(function() {
         }
     }
 
+    function iniciarTemporizador() {
+        tiempoRestante.show();
+        tiempoActual = tiempoLimite;
+        actualizarTemporizador();
+        intervaloTiempo = setInterval(() => {
+            tiempoActual--;
+            actualizarTemporizador();
+
+            if (tiempoActual <= 0) {
+                clearInterval(intervaloTiempo);
+                alert('¡Se acabó el tiempo! El laberinto se reiniciará.');
+                reiniciarJuego();
+            }
+        }, 1000);
+    }
+
+    function actualizarTemporizador() {
+        tiempoRestante.text(`Tiempo restante: ${tiempoActual}s`).css({
+            position: 'fixed',
+            top: '10px',
+            left: '10px',
+            backgroundColor: 'black',
+            color: 'white',
+            padding: '10px',
+            borderRadius: '5px',
+            fontSize: '18px',
+            zIndex: 1000
+        });
+    }
+
     function reiniciarJuego() {
+        clearInterval(intervaloTiempo);
         menuDificultad.show();
         contenedorLaberinto.hide();
         botonVolver.hide();
+        tiempoRestante.hide();
     }
 
     $('#boton-facil').click(function() {
